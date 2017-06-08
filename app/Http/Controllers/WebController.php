@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\User;
 use App\Models\Reservation;
+use App\Models\Spot;
 
 
 
@@ -18,6 +19,7 @@ class WebController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $query = \DB::table('pr_page')->where('slug_page', 'home')->first();
@@ -33,15 +35,30 @@ class WebController extends Controller
 
     public function reserva()
     {
-        $query = Reservation::('pr_page')->where('slug_page', 'home')->first();
+        $spot = Spot::find('1');
+        $query = \DB::table('pr_page')->where('slug_page', 'reservation')->first();
         $id = $query->id_page;
         $page = Page::find($id);
         $user = User::find('1');
         $template = 'layout.template-' . $page->template_page;
-        return \View::make('website.page')
+        if($spot->available_spot=='1') //Verificamos si el espacio esta disponible
+        {
+            $reserva = Reservation::create(['id_owner' => '1', 'id_spot' => '1', 'id_rentee' => '2']);
+            $spot->available_spot = '0';
+            $spot->save();
+            $available = '1';
+            return \View::make('website.reserva')
+                ->with('page',$page)
+                ->with('template', $template)
+                ->with('user', $user)
+                ->with('reserva', $reserva)
+                ->with('available', $available);
+        }
+        return \View::make('website.reserva')
             ->with('page',$page)
             ->with('template', $template)
-            ->with('user', $user);
+            ->with('user', $user)
+            ->with('spot', $spot);
     }
 
     /**

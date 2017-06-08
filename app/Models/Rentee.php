@@ -9,4 +9,5 @@ class Rentee extends Model
     //
     protected $table = 'pr_rentee';
 	protected $primaryKey = 'id_rentee';
+	public $timestamps = false;
 }

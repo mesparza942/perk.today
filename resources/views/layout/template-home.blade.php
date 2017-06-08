@@ -1,9 +1,9 @@
-<div class="dleft left"> 
+<div id="cc" class="dleft left"> 
 	<div id="googleMap" class="half"></div>
 </div>
-<div style="height: 600px;" class="dright left borde1px">
+<div id="spot" style="height: 600px; visibility: hidden;" class="dright left borde1px">
 	<br><br>
-	<a class="aplicar" href="">Reservar</a>
+	<a class="aplicar" href="reservation">Reservar</a>
 	<div hidden="hidden" style="width: 75%;">
 		<a href="redirect"><img style="width: 100%" src="<?php echo url('/'); ?>/images/fb-login-button.png" alt="Facebbok"></a>
 	</div>
@@ -34,6 +34,11 @@ function initMap() {
   var des = new Array();
   
 }
+</script>
+<script>
+  $( '#cc' ).click(function() {
+      document.getElementById("spot").style.visibility = "visible";
+    });
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCETqXRRoNFUvpjmXLRDuvzgPjlEs8NKfE&callback=initMap"></script>

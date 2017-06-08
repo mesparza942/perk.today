@@ -5,7 +5,7 @@
 			<li><a class="nav-item" href="">Renta tu Parqueadero</a></li>
 			<li><a class="nav-item grey" href="<?php echo url('/'); ?>/promociones">Promociones</a></li>
 			<li><a class="nav-item grey" href="<?php echo url('/'); ?>/trabaja-con-nosotros">Contacto</a></li>
-			<li><a class="nav-item" href="https://trello.com/perk9"><i class="fa fa-trello" aria-hidden="true"></i><span style="font-style: italic;">Scrum</span></a></li>
+			<li><a class="nav-item" href="https://trello.com/perk9"><i class="fa fa-trello" aria-hidden="true"></i><span style="font-style: italic;"> Scrum</span></a></li>
 		</ul>
 	</div>
 	<div style="text-align: right;" class="login right">
