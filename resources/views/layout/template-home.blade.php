@@ -1,8 +1,10 @@
 <div class="dleft left"> 
 	<div id="googleMap" class="half"></div>
 </div>
-<div hidden="hidden" class="dright left borde1px">
-	<div style="width: 75%;">
+<div style="height: 600px;" class="dright left borde1px">
+	<br><br>
+	<a class="aplicar" href="">Reservar</a>
+	<div hidden="hidden" style="width: 75%;">
 		<a href="redirect"><img style="width: 100%" src="<?php echo url('/'); ?>/images/fb-login-button.png" alt="Facebbok"></a>
 	</div>
 </div>
@@ -21,6 +23,12 @@ function initMap() {
 
   map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
+  var marker_p1 = new google.maps.Marker({
+    position: new google.maps.LatLng(-0.2038072, -78.4909194),
+    title:"Carlos Pozo\nEspacios: 2",
+  icon:'<?php echo url('/'); ?>/images/gps-perk.png',
+  map:map
+});
 
   var infowindow = new google.maps.InfoWindow();
   var des = new Array();

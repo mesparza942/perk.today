@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Page;
+use App\Models\User;
+use App\Models\Reservation;
+
+
+
+
 
 class WebController extends Controller
 {
@@ -17,10 +23,25 @@ class WebController extends Controller
         $query = \DB::table('pr_page')->where('slug_page', 'home')->first();
         $id = $query->id_page;
         $page = Page::find($id);
+        $user = User::find('1');
         $template = 'layout.template-' . $page->template_page;
         return \View::make('website.page')
             ->with('page',$page)
-            ->with('template', $template);
+            ->with('template', $template)
+            ->with('user', $user);
+    }
+
+    public function reserva()
+    {
+        $query = Reservation::('pr_page')->where('slug_page', 'home')->first();
+        $id = $query->id_page;
+        $page = Page::find($id);
+        $user = User::find('1');
+        $template = 'layout.template-' . $page->template_page;
+        return \View::make('website.page')
+            ->with('page',$page)
+            ->with('template', $template)
+            ->with('user', $user);
     }
 
     /**
@@ -31,7 +52,7 @@ class WebController extends Controller
     public function create($object)
     {
         //
-        
+
     }
 
     /**

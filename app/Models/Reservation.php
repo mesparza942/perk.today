@@ -9,4 +9,5 @@ class Reservation extends Model
     //
     protected $table = 'pr_reservation';
 	protected $primaryKey = 'id_reservation';
+	protected $fillable = [''];
 }

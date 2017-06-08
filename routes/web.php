@@ -14,6 +14,7 @@
 //Route::resource('user','UserController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
 
 Route::get('/','WebController@index');
+Route::get('/reservation', 'WebController@reserva')
 Route::get('/redirect', 'UserController@redirect');
 Route::get('/callback', 'UserController@callback');
 

@@ -18,7 +18,7 @@ header{background-color: #505050;}
 .half{width: 50%;}
 .four{width: 25%;}
 .dleft{width: 40%;}
-.dright{width: 59%;}
+.dright{width: 59.82%;}
 .login{width: 10%; margin-top: 3px;}
 
 /* DIVISIONES PARTICULARES */
@@ -40,6 +40,7 @@ ul{list-style: none; padding-left: 0px; margin: 0;}
 .nav-subitem{margin: 0px 15px 0px 10px; font-weight: bold;}
 
 /* CLASES PARTICUALRES */
+.aplicar{ padding: 4px 20px 4px 10px; text-decoration: none; color: #00549a; border: 2px solid #00549a; border-radius: 5px; font-weight: bold; font-size:1.4em;}
 .logo{width: 75%;}
 .marker-header{width: 20%; margin-top: 20px; margin-right: 5px;}
 .tright{text-align: right;}

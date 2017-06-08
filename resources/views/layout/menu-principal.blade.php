@@ -10,7 +10,12 @@
 	</div>
 	<div style="text-align: right;" class="login right">
 		<ul class="menu">
-			<li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> Iniciar Sesión</a>
+			<li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i>
+			<?php 
+			if($user->id_user='1')
+				echo $user->firstname_user;
+			else
+			 echo "Iniciar Sesión" ?></a>
 				<ul>
 					<!-- <li><a class="nav-item grey" href=""><img src="<?php echo url('/'); ?>/images/facebook.png" alt="Facebook Perk" class="social-icon"></a></li>
 					<li><a class="nav-item grey" href=""><img src="<?php echo url('/'); ?>/images/social-google+.png" alt="Google+ Perk" class="social-icon"></a></li> -->
