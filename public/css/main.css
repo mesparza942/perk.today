@@ -1,0 +1,46 @@
+/*IMPORTS*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700');
+
+/* SECCIONES ESTANDAR */
+html, body{margin: 0; color: #fff; font-family: 'Open Sans', sans-serif;}
+header{background-color: #505050;}
+
+/* CLASES ESTANDAR */
+.left{float: left;}
+.right{float: right;}
+.borde1px{border: 1px solid #000;}
+
+
+/* DIVISIONES ESTANDAR */
+.wrapper{width: 100%; margin: 0 auto;}
+.fullwidth{width: 100%;}
+.half{width: 50%;}
+.four{width: 25%;}
+.dleft{width: 40%;}
+.dright{width: 59%;}
+.login{width: 10%; margin-top: 3px;}
+
+/* DIVISIONES PARTICULARES */
+#googleMap{width: 514px; height: 600px; position: none; border: 1px solid #000;}
+
+/* MENU PRINCIPAL */
+ul{list-style: none; padding-left: 0px; margin: 0;}
+.menu li>a{display: block; text-decoration: none; color: #fff}
+.menu li>a:hover{color: #000;}
+.menu>li{float: left; text-align:center}
+.menu>li>ul{display: none; padding-left: 0px; position: fixed; z-index: 1; margin-top: 0px!important;}
+.menu>li>ul>li{text-align: left; background-color: rgba(255, 255, 255, 0.8); -moz-background-color: rgba(255, 255, 255, 0.8); -ms-background-color: rgba(255, 255, 255, 0.8);}
+.menu>li>ul>li>a{padding: 10px 6px; border-bottom: 1px solid #8593a5;}
+.menu>li>ul>li:last-child>a{border-bottom:none;}
+.menu>li:hover>ul {display:block; z-index: 1;}
+
+.nav{border-top: 1px solid #8593a5; clear: both; padding-bottom: 40px;}
+.nav-item{border-right: 1px solid #8593a5; padding: 5px 10px 5px 10px;}
+.nav-subitem{margin: 0px 15px 0px 10px; font-weight: bold;}
+
+/* CLASES PARTICUALRES */
+.logo{width: 75%;}
+.marker-header{width: 20%; margin-top: 20px; margin-right: 5px;}
+.tright{text-align: right;}
+.white{color: #fff;}
