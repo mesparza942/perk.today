@@ -17,4 +17,4 @@ Route::get('/','WebController@index');
 Route::get('/reservation', 'WebController@reserva')
 Route::get('/redirect', 'UserController@redirect');
 Route::get('/callback', 'UserController@callback');
-
+//Prueba de push Junio 8
