@@ -3,7 +3,7 @@
 
 @include('layout.head')
 
-<body>
+<body onload="loadScript()">
 
 @include('layout.header')
 

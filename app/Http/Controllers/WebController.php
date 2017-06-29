@@ -61,6 +61,17 @@ class WebController extends Controller
             ->with('spot', $spot);
     }
 
+    public function contacto()
+    {
+        $query = \DB::table('pr_page')->where('slug_page', 'contacto')->first();
+        $id = $query->id_page;
+        $page = Page::find($id);
+        $template = 'layout.template-' . $page->template_page;
+        return \View::make('website.reserva')
+            ->with('page',$page)
+            ->with('template', $template);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
