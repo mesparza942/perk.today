@@ -9,16 +9,15 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
-Route::resource('user','UserController', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Auth::routes();
 
-Route::get('/','WebController@index');
-Route::get('/reservation', 'WebController@reserva');
+Route::get('/', 'WebController@index');
 Route::get('/contacto', 'WebController@contacto');
-Route::get('/redirect', 'UserController@redirect');
-Route::get('/callback', 'UserController@callback');
-//Prueba de push Junio 8
+Route::get('/contacto/gracias', 'WebController@gracias');
 
-/*FUNCIONES*/
-//Route::get('/action/auto-detalle', ['as' => 'auto-detalle', 'uses' => 'FunctionsController@detalleAuto']);
+Route::get('/auth/facebook', 'Auth\RegisterController@redirectToProvider');
+Route::get('/auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
+
+Route::get('/home', 'HomeController@index')->name('home');

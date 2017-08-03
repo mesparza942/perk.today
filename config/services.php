@@ -12,15 +12,15 @@ return [
     | default location for this type of information, allowing packages
     | to have a conventional place to find your various credentials.
     |
-    */
+     */
 
-    'mailgun' => [
+    'mailgun'   => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
     ],
 
-    'ses' => [
-        'key' => env('SES_KEY'),
+    'ses'       => [
+        'key'    => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
@@ -29,16 +29,22 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
+    'stripe'    => [
+        'model'  => App\User::class,
+        'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
 
-    'facebook' => [
-        'client_id' => '302504886864911',
+    'facebook'  => [
+        'client_id'     => '302504886864911',
         'client_secret' => '8cc9becac6a46c2fb4e1c9d9705408e6',
-        'redirect' => 'http://localhost/perk.today/public/callback',
+        'redirect'      => 'http://localhost/examen/public/auth/facebook/callback',
+    ],
+
+    'google'    => [
+        'client_id'     => '256397667673-c4qk1nhhbj0c77o484758kldn0quccp9.apps.googleusercontent.com',
+        'client_secret' => 'dN0qSU9xGK0BjyKnnruel4j_',
+        'redirect'      => 'http://localhost/auth/google/callback',
     ],
 
 ];

@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -14,15 +14,21 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $table = 'pr_user';
-
     protected $fillable = [
-        'id_user','firstname_user', 'lastname_user', 'socialname_user', 'e-mail_user', 'password_user' ];
+        'name', 'email', 'password',
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = ['password' ];
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    public function socialProviders()
+    {
+        return $this->hasMany(SocialProvider::class);
+    }
 }
